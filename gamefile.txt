@@ -1,0 +1,37 @@
+// this is a comment
+// lines should not be more than 80 characters wide
+// line starting with "." are the displayed narration
+// if a line ends in "?", you can provide options
+// "=" will be the next state it goes to
+// The choices are made by entering numbers
+
+#START
+.You wake up in a dark room. Which way do you go?4
+?1 Forward = KNIGHT
+?2 Backward = FIRE
+?3 Left = NOTHING
+?4 Right = NOTHING
+
+#NOTHING
+.There is nothing here. You die of boredom.
+= DIE
+
+#KNIGHT
+.There is a scary looking knight. How scared are you?3
+?1 Very scared = DIE
+?2 Not scared = DIE
+?3 What knight? = DENIAL
+
+#DENIAL
+.You have somehow, against all odds, gotten out of danger.
+= STOP
+
+#FIRE
+.There is a giant fire. You run into it and die.
+= DIE
+
+#DIE
+.You make terrible choices. You are now dead.
+= STOP
+
+#STOP
